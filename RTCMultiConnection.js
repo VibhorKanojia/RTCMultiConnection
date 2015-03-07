@@ -407,9 +407,6 @@
             }
 
             if (isFirefox && session.screen) {
-                if (location.protocol !== 'https:') {
-                    return error(SCREEN_COMMON_FAILURE);
-                }
                 warn(firefoxScreenCapturingWarning);
 
                 screenConstraints.video = merge(screenConstraints.video.mandatory, {
